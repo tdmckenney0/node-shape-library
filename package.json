@@ -1,0 +1,24 @@
+{
+  "name": "node-shape-library",
+  "version": "1.0.0",
+  "description": "Library to manipulate shape objects.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^4.0.1",
+    "unit.js": "^2.0.0"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tdmckenney0/node-shape-library.git"
+  },
+  "author": "Tanner Mckenney",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tdmckenney0/node-shape-library/issues"
+  },
+  "homepage": "https://github.com/tdmckenney0/node-shape-library#readme"
+}
