@@ -1,5 +1,5 @@
 const test = require('unit.js');
-const Shapes = require('../lib/shapes.js');
+const Circle = require('../lib/shapes.circle.js');
 
 describe('Circle', function() {
 	it('Can instantiate Circle.', function() { 
@@ -7,7 +7,7 @@ describe('Circle', function() {
 		var cir; 
 
 		try {
-			cir = new Shapes.Circle(2.0);
+			cir = new Circle(2.0);
 		} catch (e) { 
 			// Do nothing.
 		}
@@ -20,7 +20,7 @@ describe('Circle', function() {
 		var cir; 
 
 		try {
-			cir = new Shapes.Circle('This is a string');
+			cir = new Circle('This is a string');
 		} catch (e) { 
 			cir = e;
 		}
@@ -30,7 +30,7 @@ describe('Circle', function() {
 
 	it('Can get area of Circle.', function() {
 
-		const cir = new Shapes.Circle(2.0);
+		const cir = new Circle(2.0);
 		const area = cir.area();
 
 		test.number(area).is(2.0 * 2.0 * Math.PI);
@@ -38,7 +38,7 @@ describe('Circle', function() {
 
 	it('Can get circumference of Circle.', function() {
 
-		const cir = new Shapes.Circle(2.0);
+		const cir = new Circle(2.0);
 		const circumference = cir.circumference();
 
 		test.number(circumference).is(2.0 * 2 * Math.PI);
@@ -46,7 +46,7 @@ describe('Circle', function() {
 
 	it('Can scale a Circle.', function() {
 
-		const cir = new Shapes.Circle(2.0);
+		const cir = new Circle(2.0);
 
 		cir.scale(1.5);
 

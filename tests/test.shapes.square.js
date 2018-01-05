@@ -1,5 +1,5 @@
 const test = require('unit.js');
-const Shapes = require('../lib/shapes.js');
+const Square = require('../lib/shapes.square.js');
 
 describe('Square', function() {
 	it('Can instantiate Square.', function() { 
@@ -7,7 +7,7 @@ describe('Square', function() {
 		var square; 
 
 		try {
-			square = new Shapes.Square(2.0);
+			square = new Square(2.0);
 		} catch (e) { 
 			// Do nothing.
 		}
@@ -20,7 +20,7 @@ describe('Square', function() {
 		var square; 
 
 		try {
-			square = new Shapes.Square('This is a string');
+			square = new Square('This is a string');
 		} catch (e) { 
 			square = e;
 		}
@@ -30,7 +30,7 @@ describe('Square', function() {
 
 	it('Can get area of Square.', function() {
 
-		const square = new Shapes.Square(2.0);
+		const square = new Square(2.0);
 		const area = square.area();
 
 		test.number(area).is(4.0);
@@ -38,7 +38,7 @@ describe('Square', function() {
 
 	it('Can get perimeter of a Square.', function() {
 
-		const square = new Shapes.Square(2.0);
+		const square = new Square(2.0);
 		const perimeter = square.perimeter();
 
 		test.number(perimeter).is(8.0);
@@ -46,7 +46,7 @@ describe('Square', function() {
 
 	it('Can scale a Square.', function() {
 
-		const square = new Shapes.Square(2.0);
+		const square = new Square(2.0);
 
 		square.scale(1.5);
 
