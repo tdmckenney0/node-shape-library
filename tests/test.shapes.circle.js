@@ -57,4 +57,12 @@ describe('Circle', function() {
 			.number(area).is(3 * 3 * Math.PI)
 			.number(circumference).is(3 * 2 * Math.PI);
 	});
+
+	it('scale() can return false on bad type.', function() { 
+
+		const cir = new Circle(1, 1);
+		const scale_op_result = cir.scale("This is not the right type");
+
+		test.bool(scale_op_result).isFalse();
+	});
 });

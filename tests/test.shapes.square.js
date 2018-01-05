@@ -57,4 +57,12 @@ describe('Square', function() {
 			.number(area).is(9.0)
 			.number(perimeter).is(12.0);
 	});
+
+	it('scale() can return false on bad type.', function() { 
+
+		const square = new Square(1, 1);
+		const scale_op_result = square.scale("This is not the right type");
+
+		test.bool(scale_op_result).isFalse();
+	});
 });
