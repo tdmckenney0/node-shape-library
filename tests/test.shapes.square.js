@@ -17,44 +17,44 @@ describe('Square', function() {
 
 	it('Incorrect type throws exception.', function() { 
 
-		var cir; 
+		var square; 
 
 		try {
-			cir = new Shapes.Square('This is a string');
+			square = new Shapes.Square('This is a string');
 		} catch (e) { 
-			cir = e;
+			square = e;
 		}
 		
-		test.object(cir).is({ status: 'error', message: 'Incorrect use of `new Square(x)`' });
+		test.object(square).is({ status: 'error', message: 'Incorrect use of `new Square(x)`' });
 	});
 
-	it('Can get area of Circle.', function() {
+	it('Can get area of Square.', function() {
 
-		const cir = new Shapes.Square(2.0);
-		const area = cir.area();
+		const square = new Shapes.Square(2.0);
+		const area = square.area();
 
-		test.number(area).is(2.0 * 2.0 * Math.PI);
+		test.number(area).is(4.0);
 	});
 
-	it('Can get circumference of Circle.', function() {
+	it('Can get perimeter of a Square.', function() {
 
-		const cir = new Shapes.Square(2.0);
-		const circumference = cir.circumference();
+		const square = new Shapes.Square(2.0);
+		const perimeter = square.perimeter();
 
-		test.number(circumference).is(2.0 * 2 * Math.PI);
+		test.number(perimeter).is(8.0);
 	});
 
-	it('Can scale a Circle.', function() {
+	it('Can scale a Square.', function() {
 
-		const cir = new Shapes.Square(2.0);
+		const square = new Shapes.Square(2.0);
 
-		cir.scale(1.5);
+		square.scale(1.5);
 
-		const area = cir.area();
-		const circumference = cir.circumference();
+		const area = square.area();
+		const perimeter = square.perimeter();
 
-		test.number(cir.radius).is(3)
-			.number(area).is(3 * 3 * Math.PI)
-			.number(circumference).is(3 * 2 * Math.PI);
+		test.number(square.sidel).is(3)
+			.number(area).is(9.0)
+			.number(perimeter).is(12.0);
 	});
 });
