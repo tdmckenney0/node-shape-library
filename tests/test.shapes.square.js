@@ -1,18 +1,18 @@
 const test = require('unit.js');
-const Shapes = require('./lib/shapes.js');
+const Shapes = require('../lib/shapes.js');
 
-describe('Circle', function() {
-	it('Can instantiate Circle.', function() { 
+describe('Square', function() {
+	it('Can instantiate Square.', function() { 
 
-		var cir; 
+		var square; 
 
 		try {
-			cir = new Shapes.Circle(2.0);
+			square = new Shapes.Square(2.0);
 		} catch (e) { 
 			// Do nothing.
 		}
 		
-		test.object(cir).value(cir.radius).is(2.0);
+		test.object(square).value(square.sidel).is(2.0);
 	});
 
 	it('Incorrect type throws exception.', function() { 
@@ -20,17 +20,17 @@ describe('Circle', function() {
 		var cir; 
 
 		try {
-			cir = new Shapes.Circle('This is a string');
+			cir = new Shapes.Square('This is a string');
 		} catch (e) { 
 			cir = e;
 		}
 		
-		test.object(cir).is({ status: 'error', message: 'Incorrect use of `new Circle(x)`' });
+		test.object(cir).is({ status: 'error', message: 'Incorrect use of `new Square(x)`' });
 	});
 
 	it('Can get area of Circle.', function() {
 
-		const cir = new Shapes.Circle(2.0);
+		const cir = new Shapes.Square(2.0);
 		const area = cir.area();
 
 		test.number(area).is(2.0 * 2.0 * Math.PI);
@@ -38,7 +38,7 @@ describe('Circle', function() {
 
 	it('Can get circumference of Circle.', function() {
 
-		const cir = new Shapes.Circle(2.0);
+		const cir = new Shapes.Square(2.0);
 		const circumference = cir.circumference();
 
 		test.number(circumference).is(2.0 * 2 * Math.PI);
@@ -46,7 +46,7 @@ describe('Circle', function() {
 
 	it('Can scale a Circle.', function() {
 
-		const cir = new Shapes.Circle(2.0);
+		const cir = new Shapes.Square(2.0);
 
 		cir.scale(1.5);
 

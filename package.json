@@ -9,7 +9,7 @@
     "unit.js": "^2.0.0"
   },
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha test.js"
+    "test": "./node_modules/mocha/bin/mocha tests/"
   },
   "repository": {
     "type": "git",
