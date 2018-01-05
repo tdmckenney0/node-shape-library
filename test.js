@@ -20,7 +20,7 @@ describe('Circle', function() {
 		var cir; 
 
 		try {
-			cir = new Shapes.Circle(NaN);
+			cir = new Shapes.Circle('This is a string');
 		} catch (e) { 
 			cir = e;
 		}
