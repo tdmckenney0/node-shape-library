@@ -12,7 +12,7 @@ describe('Square', function() {
 			// Do nothing.
 		}
 		
-		test.object(square).value(square.sidel).is(2.0);
+		test.object(square).value(square.x).is(2.0);
 	});
 
 	it('Incorrect type throws exception.', function() { 
@@ -53,7 +53,7 @@ describe('Square', function() {
 		const area = square.area();
 		const perimeter = square.perimeter();
 
-		test.number(square.sidel).is(3)
+		test.number(square.x).is(3)
 			.number(area).is(9.0)
 			.number(perimeter).is(12.0);
 	});

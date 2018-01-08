@@ -12,7 +12,7 @@ describe('Circle', function() {
 			// Do nothing.
 		}
 		
-		test.object(cir).value(cir.radius).is(2.0);
+		test.object(cir).value(cir.x).is(2.0);
 	});
 
 	it('Incorrect type throws exception.', function() { 
@@ -53,7 +53,7 @@ describe('Circle', function() {
 		const area = cir.area();
 		const circumference = cir.circumference();
 
-		test.number(cir.radius).is(3)
+		test.number(cir.x).is(3)
 			.number(area).is(3 * 3 * Math.PI)
 			.number(circumference).is(3 * 2 * Math.PI);
 	});

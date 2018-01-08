@@ -12,7 +12,7 @@ describe('EquilateralTriangle', function() {
 			// Do nothing.
 		}
 		
-		test.object(equilateraltriangle).value(equilateraltriangle.sidel).is(2.0);
+		test.object(equilateraltriangle).value(equilateraltriangle.x).is(2.0);
 	});
 
 	it('Incorrect type throws exception.', function() { 
@@ -53,7 +53,7 @@ describe('EquilateralTriangle', function() {
 		const area = equilateraltriangle.area();
 		const perimeter = equilateraltriangle.perimeter();
 
-		test.number(equilateraltriangle.sidel).is(3)
+		test.number(equilateraltriangle.x).is(3)
 			.number(area).is((9.0 * Math.sqrt(3)) / 4)
 			.number(perimeter).is(9.0);
 	});
