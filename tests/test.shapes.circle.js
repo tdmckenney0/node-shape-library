@@ -25,7 +25,7 @@ describe('Circle', function() {
 			cir = e;
 		}
 		
-		test.object(cir).is({ status: 'error', message: 'Incorrect use of `new Circle(x)`' });
+		test.object(cir).is({ status: 'error', message: 'Bad arguments. Please see documentation.' });
 	});
 
 	it('Can get area of Circle.', function() {

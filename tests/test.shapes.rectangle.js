@@ -27,7 +27,7 @@ describe('Rectangle', function() {
 			rectangle = e;
 		}
 		
-		test.object(rectangle).is({ status: 'error', message: 'Incorrect use of `new Rectangle(w, h)`' });
+		test.object(rectangle).is({ status: 'error', message: 'Bad arguments. Please see documentation.' });
 	});
 
 	it('Can get area of Rectangle.', function() {

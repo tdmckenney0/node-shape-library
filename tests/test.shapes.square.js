@@ -25,7 +25,7 @@ describe('Square', function() {
 			square = e;
 		}
 		
-		test.object(square).is({ status: 'error', message: 'Incorrect use of `new Square(x)`' });
+		test.object(square).is({ status: 'error', message: 'Bad arguments. Please see documentation.' });
 	});
 
 	it('Can get area of Square.', function() {
