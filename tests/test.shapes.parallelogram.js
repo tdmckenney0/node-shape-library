@@ -13,8 +13,8 @@ describe('Parallelogram', function() {
 		}
 		
 		test.object(parallelogram)
-			.value(parallelogram.width).is(2.0)
-			.value(parallelogram.height).is(4.0);
+			.value(parallelogram.x).is(2.0)
+			.value(parallelogram.y).is(4.0);
 	});
 
 	it('Incorrect type throws exception.', function() { 
@@ -55,8 +55,8 @@ describe('Parallelogram', function() {
 		const area = parallelogram.area();
 		const perimeter = parallelogram.perimeter();
 
-		test.number(parallelogram.width).is(18.0)
-			.number(parallelogram.height).is(10.5)
+		test.number(parallelogram.x).is(18.0)
+			.number(parallelogram.y).is(10.5)
 			.number(area).is(189.0)
 			.number(perimeter).is(57.0);
 	});

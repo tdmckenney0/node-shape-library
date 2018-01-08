@@ -13,8 +13,8 @@ describe('Rectangle', function() {
 		}
 		
 		test.object(rectangle)
-			.value(rectangle.width).is(2.0)
-			.value(rectangle.height).is(4.0);
+			.value(rectangle.x).is(2.0)
+			.value(rectangle.y).is(4.0);
 	});
 
 	it('Incorrect type throws exception.', function() { 
@@ -55,8 +55,8 @@ describe('Rectangle', function() {
 		const area = rectangle.area();
 		const perimeter = rectangle.perimeter();
 
-		test.number(rectangle.width).is(18.0)
-			.number(rectangle.height).is(10.5)
+		test.number(rectangle.x).is(18.0)
+			.number(rectangle.y).is(10.5)
 			.number(area).is(189.0)
 			.number(perimeter).is(57.0);
 	});
