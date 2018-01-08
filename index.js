@@ -1,23 +1,24 @@
-var Shapes = require('./lib/shapes.js');
+const Shapes = require('./lib/shapes.js');
 
-var cir = new Shapes.Circle(1);
-
-console.log(cir.radius);
-console.log(cir.area());
-console.log(cir.circumference());
-
-cir.scale(2);
-
-console.log(cir.radius);
-console.log(cir.area());
-console.log(cir.circumference());
-
-
-try {
-	var cir2 = new Shapes.Circle(null);
-
-	console.log(cir2);
-} catch (e) {
-	console.log(e.message);
+function rand() {
+	return Math.floor(Math.random() * 1000) / 100;
 }
 
+for(var Shape in Shapes) {
+
+	var scale = rand();
+	var x = rand();
+	var y = rand();
+
+	console.log(' --- ' + Shape + '(' + x + ', ' + y + ') --- \n');
+
+	Shape = new Shapes[Shape](x, y);
+
+	console.log('  [Perimeter]: ' +  Shape.perimeter());
+	console.log('  [Area]: ' +  Shape.area() + '\n');
+
+	Shape.scale(scale);
+
+	console.log('  [Perimeter Scale x' + scale + ']: ' + Shape.perimeter());
+	console.log('  [Area Scale x' + scale + ']: ' + Shape.area() + '\n');
+}

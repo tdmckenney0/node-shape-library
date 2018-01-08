@@ -12,3 +12,4 @@
  2. `cd` into said directory.
  3. run `npm install`
  4. run `npm test` to test the contents. 
+ 5. run `npm run index` or `node ./index.js` to run demonstration. 
